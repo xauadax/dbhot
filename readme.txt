@@ -11,3 +11,17 @@ git status
 
 #查看版本记录
 git log
+
+#回滚至之前的版本
+git log 
+git reset --hard 版本号
+
+#回滚至之后的版本
+git reflog 
+git reset --hard 版本号
+
+#修改后的文件回到修改前
+git checkout
+
+#暂存区（绿色）回到工作区（红色）
+git reset HEAD
