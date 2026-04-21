@@ -46,7 +46,7 @@ git branch -d 分支名称
 #工作流
 
 
-
+#在家里上传代码
 #给远程仓库起名字
 git remote add origin 远程仓库地址
 
@@ -58,3 +58,45 @@ git clone 远程仓库地址（内部已实现git remote add origin 远程仓库
 
 #切换分支
 git checkout 分支
+
+#在公司开发代码
+#切换到dev分支进行开发
+git checkout dev
+
+#把master分支合并到dev（仅执行一次）
+git merge master
+
+#修改代码
+
+#提交代码
+git add .
+git commit -m 'xx'
+git push origin dev
+
+
+#回家接着写代码
+#切换到dev分支进行开发
+git checkout dev
+
+#拉代码
+git pull origin dev 
+
+#继续开发
+
+#提交代码
+git add .
+git commit -m 'xx'
+git push origin dev
+
+#开发完毕要上线
+#将dev分支合并到master,进行上线
+git checkout master
+git merge dev
+git push origin master
+
+#把dev分支也推送到远程
+git checkout dev
+git merge master
+git push origin dev
+
+
